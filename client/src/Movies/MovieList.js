@@ -1,27 +1,27 @@
 import React from 'react';
 
 export default function MovieList(props) {
+  // This component is expecting props from App.js, name your prop "movies"
+  const { movies } = props
+
   return (
     <div className="movie-list">
-      {props.movies.map(movie => (
-        <MovieDetails key={movie.id} movie={movie} />
+      {/*  Use Link from React Router Dom to make each movie clickable */}
+      {movies.map(movie => (
+     
+        <div className="movie-card">
+          <h2>{movie.title}</h2>
+          <div className="movie-director">
+            Director: <em>{movie.director}</em>
+          </div>
+          <div className="movie-metascore">
+            Metascore: <strong>{movie.metascore}</strong>
+          </div>
+        </div>
+
+
       ))}
     </div>
   );
 }
 
-function MovieDetails(props) {
-  const { title, director, metascore } = props.movie;
-
-  return (
-    <div className="movie-card">
-      <h2>{title}</h2>
-      <div className="movie-director">
-        Director: <em>{director}</em>
-      </div>
-      <div className="movie-metascore">
-        Metascore: <strong>{metascore}</strong>
-      </div>
-    </div>
-  );
-}

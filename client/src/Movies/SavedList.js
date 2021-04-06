@@ -8,6 +8,7 @@ export default function SavedList(props) {
         <span className="saved-movie">{movie.title}</span>
       ))}
       <div className="home-button">Home</div>
+      
     </div>
   );
 }

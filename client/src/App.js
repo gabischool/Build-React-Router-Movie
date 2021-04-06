@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 import SavedList from './Movies/SavedList';
 
 export default function App () {
@@ -10,10 +9,10 @@ export default function App () {
   useEffect(() => {
     const getMovies = () => {
       axios
-        .get('http://localhost:5000/api/movies') // Study this endpoint with Postman
+        .get('http://localhost:5000/api/movies')
         .then(response => {
-          // Study this response with a breakpoint or log statements
-          // and set the response data as the 'movieList' slice of state
+          // Study this response with a console log
+          // and set the response data to the 'movielist' state
         })
         .catch(error => {
           console.error('Server Error', error);
@@ -30,7 +29,7 @@ export default function App () {
     <div>
       <SavedList list={[ /* This is stretch */]} />
 
-      <div>Replace this Div with your Routes</div>
+      <div>Replace this Div with your Routes, make sure to pass the state as a prop</div>
     </div>
   );
 }

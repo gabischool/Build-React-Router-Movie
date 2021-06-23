@@ -1,8 +1,8 @@
 import React from 'react';
-
+import { BrowserRouter as Router, useParams } from 'react-router-dom'
 export default function MovieList(props) {
   // This component is expecting props from App.js, name your prop "movies"
-  const { movies } = props
+  const { movies, setMovies } = props
 
   return (
     <div className="movie-list">

@@ -5,7 +5,7 @@ export default function Movie(props) {
   const [movie, setMovie] = useState();
    
   let params = 0
-  // Change ^^^ this line and use a useParams hook to obtain the :id parameter from the URL, make sure to import useParams from react-router-dom
+  // Change ^^^ this line and use a useParams hook to obtain the :id parameter from the URL, make sure to import useParams from react-router
  
   useEffect(() => {
     let id = Number(params.id)
